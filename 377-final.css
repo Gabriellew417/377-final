@@ -1,0 +1,47 @@
+#title {
+color: rgb(12, 12, 87);
+width: 100%;
+background-color: rgb(95, 126, 198);
+
+}
+#body {
+    background-color: rgb(161, 179, 208)
+}
+#main-nav{
+    background-color: rgb(81, 122, 156);
+    padding: 0%;
+    margin: 2px;
+    width: 98%;
+    border: 5px solid rgb(13, 41, 81);
+    font-family: times;
+    font: 100;
+    
+}
+
+#main-nav li{
+    display: inline;
+    position: relative;
+    padding: 13px;
+    height: 30px;
+    width: 5px;  
+}
+#main-nav a{
+    color: rgb(12, 12, 87);
+    font-family: verdana;
+
+}
+#main-nav li a:hover {
+    background-color:rgb(5, 37, 83);
+    height: 30px;
+    width: 5px;
+}
+.box {
+    border: 3px solid rgb(15, 0, 61);
+    width: 30%;
+    margin: 10px;
+    padding: 4px;
+}
+#myChart{
+    height: 100px;
+    width: 45%;
+}
