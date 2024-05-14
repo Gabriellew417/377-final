@@ -1,0 +1,24 @@
+{
+  "name": "expressprojectapp",
+  "version": "1.0.0",
+  "description": "An Express App for INST377 project",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabriellew417/377-final.git"
+  },
+  "author": "Levis Forbang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabriellew417/377-final/issues"
+  },
+  "homepage": "https://github.com/Gabriellew417/377-final#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
