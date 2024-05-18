@@ -1,5 +1,5 @@
 const supabaseClient = require('@supabase/supabase-js')
-
+const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
 const port = 3000
@@ -39,7 +39,39 @@ app.get('/team', (req, res) => {
     res.send(JSON.stringify(word))
 })
 
+//Doing supabase 
 
+app.get(`/ticket_data`, async(req, res) => {
+    console.log("Attempting to GET ticket data.")
+
+    const {data, error} = await supabase
+        .from('tickets')
+        .select()
+
+    if(error) {
+        console.log('Error')
+    } else {
+        res.send(data)
+    }
+})
+
+app.post('/ticket_input', async(req, res) => {
+    console.log("Adding Ticket Data.")
+    console.log(req.body)
+    var id = req.body.id;
+    var name = req.body.name;
+    var description = req.body.description;
+
+    const {data, error} = await supabase
+        .from('tickets')
+        .insert({'ticket_id':id, 'name':name, 'ticket_des': description})
+        .select()
+    if(error) {
+        console.log('Error')
+    } else {
+        res.send(data)
+    }
+})
 
 app.listen(port, () => {
     console.log(`Express app Listing on port ${port}`)
