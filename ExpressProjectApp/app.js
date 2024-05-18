@@ -1,8 +1,15 @@
+const supabaseClient = require('@supabase/supabase-js')
+
 const express = require('express')
 const app = express()
 const port = 3000
 
+app.use(bodyParser.json())
 app.use(express.static(__dirname + '/public'))
+
+const supabaseUrl = 'https://mkhpfrsjwvuqkacikfmv.supabase.co'
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1raHBmcnNqd3Z1cWthY2lrZm12Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5Nzg0MzUsImV4cCI6MjAzMTU1NDQzNX0.fmndN_xz97i40jCZy7OKx5EGOE-x3r8ZT2_1sCGCqlw'
+const supabase = supabaseClient.createClient(supabaseUrl,supabaseKey)
 
 app.get('/', (req, res) => {
     res.sendFile('public/377-final-homePage.html', {root: __dirname})

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Gabriellew417/377-final#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^2.43.2",
     "express": "^4.19.2",
     "nodemon": "^3.1.0"
   }
