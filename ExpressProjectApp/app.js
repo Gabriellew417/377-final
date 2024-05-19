@@ -12,7 +12,7 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = supabaseClient.createClient(supabaseUrl,supabaseKey)
 
 app.get('/', (req, res) => {
-    res.sendFile('public/377-final-homePage.html', {root: __dirname})
+    res.sendFile('public/377-final-helpPage.html', {root: __dirname})
 })
 
 app.get('/mission', (req, res) => {
@@ -39,7 +39,7 @@ app.get('/team', (req, res) => {
     res.send(JSON.stringify(word))
 })
 
-//Doing supabase 
+//Supabase 
 
 app.get(`/ticket_data`, async(req, res) => {
     console.log("Attempting to GET ticket data.")
@@ -58,13 +58,13 @@ app.get(`/ticket_data`, async(req, res) => {
 app.post('/ticket_input', async(req, res) => {
     console.log("Adding Ticket Data.")
     console.log(req.body)
-    var id = req.body.id;
     var name = req.body.name;
+    var date = req.body.date;
     var description = req.body.description;
 
     const {data, error} = await supabase
         .from('tickets')
-        .insert({'ticket_id':id, 'name':name, 'ticket_des': description})
+        .insert({'name':name, 'date':date, 'description': description})
         .select()
     if(error) {
         console.log('Error')

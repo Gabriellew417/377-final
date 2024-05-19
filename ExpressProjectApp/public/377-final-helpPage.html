@@ -3,6 +3,7 @@
         <center><h1 id = "title">TERP Weather System</h1></center>
         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
         <script src="projecttest.js"></script>
+        <script src="help_ticket.js"></script>
         <link rel="stylesheet" href="377-final.css">
     </head>
     <body id = "body">
@@ -23,7 +24,22 @@
             </center>
         </header>
         <center><h1>HELP</h1></center>
-        <center>
+        <!--Help Form-->
+        <div id = "help-form">
+            <form name = "help" onsubmit="createTicket(); return false">
+                <label>Name:</label>
+                <input type = "text" id = "name" required>
+                <br>
+                <label>Date:</label>
+                <input type = "date" id = "date" required></input>
+                <br>
+                <label>Message:</label>
+                <input type = "text" id = "message" required></input>
+                <br>
+                <input type = "submit" name = "Add Ticket">
+            </form> 
+        </div>
+
         <div class="audio-box">
             <h2>In this web page there are options to Navigate using Audio!</h2>
             <h3>Ensure your Mic is enabled to be able to use this feature</h3>
