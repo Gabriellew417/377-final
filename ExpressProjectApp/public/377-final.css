@@ -88,9 +88,8 @@ background-color: rgb(95, 126, 198);
     width: 1000;
 } 
 #buttons{
-    border: 3px solid #fff;
-    width: 300px;
-    height: 600px;
+    width: 50%;
+    height: 400px;
 }
 button {
     display: block;
@@ -135,7 +134,7 @@ button {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: baseline;
-  width: 300px;
+  width: 50%;
   height: 200px;
 }
 
@@ -157,3 +156,23 @@ button {
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
+.descriptionBox{
+    border: 3px solid rgb(237, 235, 243);
+    margin-top: 50px;
+    width: 50%;
+}
+.float-container2 {
+    border: 3px solid #80370c;
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+}
+.audio-box {
+        color: rgb(203, 209, 193);
+        background-color: rgb(0, 79, 131);
+        width: 37%;
+        margin: 3px;
+        padding: 5px;
+        font-family: cursive;
+}
+
