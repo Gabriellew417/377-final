@@ -46,13 +46,15 @@ app.get(`/ticket_data`, async(req, res) => {
 
     const {data, error} = await supabase
         .from('tickets')
-        .select()
+        .select('*')
+        .order('date', {ascending: false})
 
     if(error) {
         console.log('Error')
     } else {
         res.send(data)
     }
+
 })
 
 app.post('/ticket_input', async(req, res) => {

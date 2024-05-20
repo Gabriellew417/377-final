@@ -98,7 +98,15 @@ button {
     margin-bottom: 30px;
 }
 
+.ticket-receipt{
+    margin-top: 20px;
+}
 
+.ticket{
+    border: 1px solid;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 
 /* CSS */
 .button-6 {
